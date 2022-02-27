@@ -77,8 +77,9 @@ libtonezone_la_LDFLAGS	= -version-info "$(LTZ_CURRENT):$(LTZ_REVISION):$(LTZ_AGE
 libtonezone_la_LIBADD	= -lm
 
 if PBX_PCAP
-noinst_PROGRAMS		+= dahdi_pcap
+noinst_PROGRAMS		+= dahdi_pcap dahdi_gsmtap
 dahdi_pcap_LDADD	= -lpcap
+dahdi_gsmtap_LDADD	= -losmocore
 endif
 
 patlooptest_LDADD	= libtonezone.la
