@@ -30,6 +30,7 @@ dahdi_cfg
 dahdi_diag
 dahdi_maint
 dahdi_monitor
+dahdi_rawdump
 dahdi_pcap
 dahdi_scan
 dahdi_speed

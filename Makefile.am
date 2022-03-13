@@ -34,6 +34,7 @@ sbin_PROGRAMS	= \
 	dahdi_test \
 	dahdi_maint \
 	dahdi_monitor \
+	dahdi_rawdump \
 	dahdi_cfg \
 	dahdi_speed \
 	dahdi_scan \
