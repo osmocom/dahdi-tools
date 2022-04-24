@@ -182,6 +182,7 @@ AST_EXT_LIB_SETUP([PCAP], [pcap], [pcap])
 AST_C_DEFINE_CHECK([DAHDI], [DAHDI_CODE], [dahdi/user.h])
 DAHDI23_DIR="${DAHDI_DIR}"
 AST_C_DEFINE_CHECK([DAHDI23], [DAHDI_CONFIG_NTTE], [dahdi/user.h])
+AST_C_DEFINE_CHECK([TRUNKDEV], [DAHDI_TRUNKDEV_CREATE], [dahdi/user.h])
 AST_EXT_LIB_CHECK([NEWT], [newt], [newtBell], [newt.h])
 AST_EXT_LIB_CHECK([USB], [usb], [usb_init], [usb.h])
 AST_EXT_LIB_CHECK([PCAP], [pcap], [pcap_compile], [pcap.h])
@@ -193,6 +194,7 @@ CPPFLAGS="$saved_CPPFLAGS"
 
 AM_CONDITIONAL([PBX_NEWT], [test "$PBX_NEWT" = "1"])
 AM_CONDITIONAL([PBX_PCAP], [test "$PBX_PCAP" = "1" -a "$DAHDI_TXMIRROR" = "1"])
+AM_CONDITIONAL([PBX_TRUNKDEV], [test "$PBX_TRUNKDEV" = "1"])
 
 AC_CHECK_FUNCS([semtimedop])
 AC_CHECK_FUNCS([alarm bzero gettimeofday memset pow regcomp select socket strcasecmp strchr strdup strerror strrchr strstr strtol strtoul])
@@ -390,6 +392,7 @@ AC_CONFIG_FILES([
 	xpp/xtalk/Makefile
 	xpp/oct612x/Makefile
 	xpp/perl_modules/Makefile
+	trunkdev/Makefile
 	])
 AC_OUTPUT
 

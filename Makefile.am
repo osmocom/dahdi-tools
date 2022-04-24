@@ -17,7 +17,7 @@ CFLAGS	+= \
 	#-Wformat=2
 endif
 
-SUBDIRS	= xpp doc hotplug
+SUBDIRS	= xpp doc hotplug trunkdev
 
 if PPPD
 SUBDIRS	+= ppp
